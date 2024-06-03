@@ -1,0 +1,5 @@
+let
+    Source = (rangeName) => 
+    Excel.CurrentWorkbook(){[Name=rangeName]}[Content]{0}[Column1]
+in
+    Source

@@ -1,0 +1,10 @@
+let
+	Source = Odbc.Query("DRIVER=ODBC Driver 17 for SQL Server;SERVER="&Text.From(fnGetParam("Server"))&";APP=Microsoft Office; DATABASE=Portfolio_Project;",
+"
+SELECT *
+FROM dbo.CovidDeaths AS cd
+WHERE cd.continent = '" &Text.From(fnGetParam("Continent"))& "'
+"
+)
+in
+	Source
